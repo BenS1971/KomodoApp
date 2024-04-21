@@ -5,6 +5,10 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Komodo_Console", "Komodo_Console\Komodo_Console.csproj", "{D6DBEEC1-44DA-414F-AC91-A0FDCDBE7F6A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Developer_Repo.Repository", "Developer_Repo\Developer_Repo.Repository.csproj", "{A1A29BD9-39BA-4D2A-A15D-6EC87DB821C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dev_Team.Repository", "Dev_Team_Repository\Dev_Team.Repository.csproj", "{4AC6D569-A84B-425F-94E2-8D7D4A898BC2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{D6DBEEC1-44DA-414F-AC91-A0FDCDBE7F6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6DBEEC1-44DA-414F-AC91-A0FDCDBE7F6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6DBEEC1-44DA-414F-AC91-A0FDCDBE7F6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1A29BD9-39BA-4D2A-A15D-6EC87DB821C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1A29BD9-39BA-4D2A-A15D-6EC87DB821C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1A29BD9-39BA-4D2A-A15D-6EC87DB821C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1A29BD9-39BA-4D2A-A15D-6EC87DB821C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AC6D569-A84B-425F-94E2-8D7D4A898BC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AC6D569-A84B-425F-94E2-8D7D4A898BC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AC6D569-A84B-425F-94E2-8D7D4A898BC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AC6D569-A84B-425F-94E2-8D7D4A898BC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

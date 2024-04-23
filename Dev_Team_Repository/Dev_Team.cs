@@ -2,7 +2,7 @@
 
 namespace Dev_Team.Repository;
 
-public class Dev_Team
+public class DevTeam
 {
 
 }

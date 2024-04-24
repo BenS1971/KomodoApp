@@ -4,6 +4,12 @@ using Dev_Team;
 public class Dev_Teams
 {
     private List<Dev_Teams>  _listOfContent = new List<Dev_Teams>();
+    private int InitialCount;
+    private static object lastName;
+
+    public object Dev_Team_ID { get; private set; }
+    public object Dev_Team_Member_Name { get; private set; }
+    public object Dev_Team_Name { get; private set; }
 
     //Okay, here we go with my CRUD methods in this repository. Let's start with CREATE...
     public void AddContentToList(Dev_Teams content)
@@ -24,11 +30,11 @@ public class Dev_Teams
         Dev_Teams oldContent = GetContentList(Dev_Teams);
         //Update Dev Teams...
         if (oldContent != oldContent)
-        {   
+        {
             oldContent.Dev_Team_ID = content.Dev_Team_ID;
-            oldContent.Dev_Team_Member_Name = content.dev_team_member_name;
-            oldContent.Dev_Team_Name = content.dev_team_name;
-           
+            oldContent.Dev_Team_Member_Name = content.Dev_Team_Member_Name;
+            oldContent.Dev_Team_Name = content.Dev_Team_Name;
+
             return true;
         }
         else
@@ -44,23 +50,24 @@ public class Dev_Teams
         if (content == null)
         {
             return false;
-        } 
-        
+        }
+
         if (InitialCount > _listOfContent.Count)
         {
             return true;
         }
     }
     // Helper method goes here. (And NOT TUNA or HAMBURGER Helper, either!!)
-    public Dev_Teams GetDev_Dev_Teams(string lastName)
+    public Dev_Teams GetDev_Teams(string lastName)
     {
         foreach (Dev_Teams in_listOfContent)
         {
-            if (Dev_Teams.lastName.ToLower() == lastName.ToLower())
+            if (Dev_Teams.lastName().Equals(lastName, StringComparison.CurrentCultureIgnoreCase))
             {
                 return content;
             }
         }
         return null;
     }
+
 }

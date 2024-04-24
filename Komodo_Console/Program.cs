@@ -7,7 +7,7 @@ ProgramUI Program()
     throw new NotImplementedException();
 }
 
-program.Run();
+ProgramUI.Run();
 
 
 

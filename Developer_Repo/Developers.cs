@@ -5,9 +5,11 @@
 // Please note the ID Number integers are  added to minimize confusion. 
 public class Developers
 {
-    public string FirstName { get; set;}
-    public string LastName { get; set; }
-    public int Developer_ID_Number { get; set;}
-    public bool Pluralsight_Access { get; set; }
-    
+    internal static object lastName;
+
+    public required string FirstName { get; set;}
+    public required string LastName { get; set; }
+    public int DeveloperIDNumber { get; set;}
+    public bool PluralsightAccess { get; set; }
+
 }

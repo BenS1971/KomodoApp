@@ -2,7 +2,7 @@
 
 
 // Below, we have the POCOs (Plain Ol' C-Sharp Objects) for the Komodo Developers. 
-// Please note the ID Number int string is added to minimize confusion. 
+// Please note the ID Number integers are  added to minimize confusion. 
 public class Developers
 {
     public string FirstName { get; set;}

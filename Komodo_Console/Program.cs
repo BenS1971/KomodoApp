@@ -1,6 +1,11 @@
 ﻿using KomodoUI;
 
-ProgramUI program = new ProgramUI();
+ProgramUI program = Program();
+
+ProgramUI Program()
+{
+    throw new NotImplementedException();
+}
 
 program.Run();
 

@@ -7,7 +7,10 @@ namespace KomodoUI;
 
 public class ProgramUI
 {
-    
+    private object _Developer_Repo;
+
+    public object newdevloper { get; private set; }
+
     public void Run()
     {
         
@@ -42,21 +45,24 @@ public class ProgramUI
                     ViewDeveloper();
                     break;
                 case "3":
-                    CreateNewDevTeam();
+                    UpdateDeveloper();
                     break;
                 case "4":
-                    ViewDevTeam();
+                    CreateNewDevTeam();
                     break;
                 case "5":
-                    UpdateDevTeam();
+                    ViewDevTeam();
                     break;
                 case "6":
-                    DeleteDeveloper();
+                    UpdateDevTeam();
                     break;
                 case "7":
-                    DeleteDevTeam();
+                    DeleteDeveloper();
                     break;
                 case "8":
+                    DeleteDevTeam();
+                    break;
+                case "9":
                     //Exiting the app and getting the heck outta there! Buh-bye!
                     System.Console.WriteLine("Goodbye.");
                     keepRunning = false;
@@ -76,14 +82,48 @@ public class ProgramUI
 private void CreateNewDeveloper()
  {
     System.Console.Clear();
-    CreateDeveloper newContent = CreateNewDeveloper();
-    _Developer_Repo.AddContentToList(newdevloper);
+    CreateDeveloper newContent = CreateDeveloper();
+    _Developer_Repo.AddContentToList(newdevloper)
  }
 
-//View a developer...
+    private CreateDeveloper()
+    {
+        throw new NotImplementedException();
+    }
 
-private void ViewDeveloper()
+    //View a developer...
+
+    private void ViewDeveloper()
+    {
+        System.Console.Clear();
+        
+        System.Console.WriteLine("Enter the I.D. number of the developer you would like to see:");
+        int Developer_ID_Number = System.Console.Read();
+        var content = Developer_ID_Number.ToString();
+    }
+    private void UpdateDeveloper;
+    {
+        
+    }
+    private void CreateNewDevTeam()
     {
 
     }
+
+    private void ViewDevTeam()
+    {
+        System.Console.Clear();
+    }
+
+    private void UpdateDevTeam()
+    {
+        System.Console.Clear();
+    }
+
+    private class CreateDeveloper
+    {
+    }
+
+
 }
+

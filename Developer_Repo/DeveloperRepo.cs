@@ -7,15 +7,15 @@ public class Developer_RepoRepository
     private List<Developers>  _listOfContent = new List<Developers>();
 
     //Okay, here we go with my CRUD methods in this repository. Let's start with CREATE...
-    public void AddContentToList(Developer_RepoRepository content)
+    public void AddContentToList(Developers content)
     {
-         _listOfContent.Add();    
+         _listOfContent.Add(content);    
     }
     // Now on to the READ method...
 
     public List<Developers> GetContentList()
     {
-        return new List<Developers>(_content);
+        return new List<Developers>(_listOfContent);
     }
 
     //Now the UPDATE method...

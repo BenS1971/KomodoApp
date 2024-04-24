@@ -1,4 +1,4 @@
-﻿using Komodo_Console;
+﻿using KomodoUI;
 
 ProgramUI program = new ProgramUI();
 

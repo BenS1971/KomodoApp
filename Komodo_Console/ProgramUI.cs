@@ -3,7 +3,7 @@ using System.ComponentModel.Design;
 using System.Runtime.InteropServices;
 
 
-namespace Komodo_Console;
+namespace KomodoUI;
 
 public class ProgramUI
 {
@@ -45,7 +45,7 @@ public class ProgramUI
                     CreateNewDevTeam();
                     break;
                 case "4":
-                    AddDevTeam();
+                    ViewDevTeam();
                     break;
                 case "5":
                     UpdateDevTeam();
@@ -70,5 +70,20 @@ public class ProgramUI
                 System.Console.ReadKey();
                 System.Console.Clear();
                 }
+    }
+
+//Create a new Developer...
+private void CreateNewDeveloper()
+ {
+    System.Console.Clear();
+    CreateDeveloper newContent = CreateNewDeveloper();
+    _Developer_Repo.AddContentToList(newdevloper);
+ }
+
+//View a developer...
+
+private void ViewDeveloper()
+    {
+
     }
 }

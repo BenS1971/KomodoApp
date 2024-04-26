@@ -5,7 +5,7 @@ namespace DeveloperRepo.Repository
 
     // Below, we have the POCOs (Plain Ol' C-Sharp Objects) for the Komodo Developers. 
 
-    public class Developer
+    public class Developers
 
     {
         internal static object? lastName;

@@ -1,4 +1,4 @@
-
+using DeveloperRepo.Repository;
 
 
 
@@ -6,7 +6,7 @@ namespace KomodoUI
 {
     public class ProgramUI
     {
-        private readonly object? _Developer_Repo;
+        private readonly DeveloperRepoRepository _devRepo = new();
 
         public object? Newdevloper { get; private set; }
 

@@ -1,34 +1,32 @@
-
-
-namespace Developer_Repo.Repository
+namespace DeveloperRepo.Repository
 {
     public class DeveloperRepoRepository
     {
-#pragma warning disable IDE0028 // Simplify collection initialization
-        private readonly List<Developers> _listOfContent = new();
+
+        private readonly List<Developer> _listOfContent = [];
 
         public int InitialCount { get; private set; }
-#pragma warning restore IDE0028 // Simplify collection initialization
+
 
         //Okay, here we go with my CRUD methods in this repository. Let's start with CREATE...
-        public void AddContentToList(Developers content)
+        public void AddContentToList(Developer content)
         {
             _listOfContent.Add(content);
         }
         // Now on to the READ method...
 
-        public List<Developers> GetContentList()
+        public List<Developer> GetContentList(string lastname)
         {
-            return new List<Developers>(_listOfContent);
+            return new List<Developer>(_listOfContent);
         }
 
         //Now the UPDATE method...
-        public bool UpdateDeveloper(Developers content)
+        public static bool UpdateDeveloper(Developer content)
         {
             //Find the developers to update...
-            Developers oldContent = GetContentList(Developers);
+            Developer oldContent = GetContentList(Developer);
             //Update Developers...
-            if (oldContent != oldContent)
+            if (oldContent == null)
             {
                 oldContent.DeveloperIDNumber = content.DeveloperIDNumber;
                 oldContent.FirstName = content.FirstName;
@@ -45,7 +43,7 @@ namespace Developer_Repo.Repository
         // Now we start deleting stuff here!
         public bool DeleteDeveloper(string lastname)
         {
-            Developers content = GetContentList(lastname);    
+            Developers content = GetContentList(lastname);
 
             if (content == null)
             {
@@ -58,16 +56,19 @@ namespace Developer_Repo.Repository
             }
         }
         // Helper method goes here. (And NOT TUNA or HAMBURGER Helper, either!!)
-        public Developers GetDevelopers(string lastName)
+        public Developers? GetDevelopers(string lastName)
         {
             foreach (Developers in _listOfContent)
             {
-                if (Developers.lastName.ToLower() == lastName.ToLower())
+                if (Developers.lastName.Equals(lastName))
                 {
-                    return content;
+                    return
                 }
             }
             return null;
         }
     }
 }
+
+
+

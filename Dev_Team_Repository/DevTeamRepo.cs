@@ -1,33 +1,34 @@
-using Dev_Team;
+
+
 
 //Here I will drop the POCOs (No, not the 1970's music group!) for the Dev_Teams.
-public class Dev_Teams
+public class DevTeamRepo
 {
-    private List<Dev_Teams>  _listOfContent = new List<Dev_Teams>();
-    private int InitialCount;
-    private static object lastName;
+    private readonly List<DevTeams> _listOfContent = [];
+    private readonly int InitialCount;
+    private static readonly object lastName;
 
-    public object Dev_Team_ID { get; private set; }
-    public object Dev_Team_Member_Name { get; private set; }
-    public object Dev_Team_Name { get; private set; }
+    public object DevTeamID { get; private set; }
+    public object DevTeamMemberName { get; private set; }
+    public object DevTeamName { get; private set; }
 
     //Okay, here we go with my CRUD methods in this repository. Let's start with CREATE...
-    public void AddContentToList(Dev_Teams content)
+    public void AddContentToList(DevTeams content)
     {
-         _listOfContent.Add(content);    
+        _listOfContent.Add(content);
     }
     // Now on to the READ method...
 
-    public List<Dev_Teams> GetContentList()
+    public List<DevTeams> GetContentList()
     {
-        return new List<Dev_Teams>(_listOfContent);
+        return new List<DevTeams>(_listOfContent);
     }
 
     //Now the UPDATE method...
-    public bool UpdateDev_Teams(Dev_Teams content)
+    public bool UpdateDevTeams(DevTeams content)
     {
         //Find the Dev Teams to update...
-        Dev_Teams oldContent = GetContentList(Dev_Teams);
+        DevTeams oldContent = GetContentList(DevTeams);
         //Update Dev Teams...
         if (oldContent != oldContent)
         {
@@ -42,10 +43,16 @@ public class Dev_Teams
             return false;
         }
     }
-    // Now we start deleting stuff here!
-    public bool DeleteDev_Teams(string lastname)
+
+    private DevTeams GetContentList(object devTeam)
     {
-        Dev_Teams content = GetDev_Dev_Teams(lastname);    
+        throw new NotImplementedException();
+    }
+
+    // Now we start deleting stuff here!
+    public bool DeleteDevTeams(string lastname)
+    {
+        DevTeams content = GetDevTeams(lastname);
 
         if (content == null)
         {
@@ -58,16 +65,23 @@ public class Dev_Teams
         }
     }
     // Helper method goes here. (And NOT TUNA or HAMBURGER Helper, either!!)
-    public Dev_Teams GetDev_Teams(string lastName)
+    public DevTeams GetDev_Teams(string lastName)
     {
-        foreach (Dev_Teams in_listOfContent)
+        foreach (DevTeams in_listOfContent)
         {
-            if (Dev_Teams.lastName().Equals(lastName, StringComparison.CurrentCultureIgnoreCase))
+            if (DevTeams.lastName().Equals(lastName, StringComparison.CurrentCultureIgnoreCase))
             {
-                return content;
+                return 
             }
         }
         return null;
     }
 
+}
+
+internal class DevTeams
+{
+    public object Dev_Team_ID { get; internal set; }
+    public object Dev_Team_Member_Name { get; internal set; }
+    public object Dev_Team_Name { get; internal set; }
 }

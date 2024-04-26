@@ -1,8 +1,8 @@
 ﻿using KomodoUI;
 
-ProgramUI program = Program();
+ProgramUI _ = Program();
 
-ProgramUI Program()
+static ProgramUI Program()
 {
     throw new NotImplementedException();
 }
